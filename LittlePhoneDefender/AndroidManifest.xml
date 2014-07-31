@@ -1,0 +1,110 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.littles"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:persistent="true"
+        >
+        <!-- Activity注册 -->
+        <activity
+            android:name=".activitys.ActivityWelcome"
+            android:label="@string/title_activity_main"
+            android:theme="@android:style/Theme.Black.NoTitleBar" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitys.ActivityMain"
+            android:label="@string/title_activity_main" 
+            android:launchMode="singleTask"
+            >
+        </activity>
+        <activity
+            android:name=".activitys.ActivityDoing"
+            android:label="@string/title_activity_doing" 
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:launchMode="singleTask"
+            >
+        </activity>
+        <activity
+            android:name=".activitys.ActivityDone"
+            android:label="@string/title_activity_done" 
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:launchMode="singleTask"
+            >
+        </activity>
+        <activity android:name=".dialogs.DialogDonePassword" android:theme="@style/MyDialogStyle"/>
+        <activity android:name=".dialogs.DialogDoneNumber" android:theme="@style/MyDialogStyle"/>
+        <activity android:name=".dialogs.DialogCheckPassword" android:theme="@style/MyDialogStyle"/>
+        
+        <!-- 服务注册 -->
+        <service android:name=".services.ServiceSensorPocket" android:enabled="true"/>
+        <service android:name=".services.ServiceSensorHand" android:enabled="true"/>
+        <service android:name=".services.ServiceSensorAway" android:enabled="true"/>                     
+        <service android:name=".services.ServiceScreenLock" android:enabled="true"/> 
+        <service android:name=".services.ServiceSendLocation" android:enabled="true"/> 
+        <service android:name=".services.ServiceSendIMSI" android:enabled="true"/>      
+        <!-- 百度定位Service -->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"/>
+        
+        <!-- 广播接收者注册 -->       
+        <receiver android:name=".receivers.ReceiverCall" android:enabled="true">
+        	<intent-filter>
+        		<action android:name="android.intent.action.PHONE_STATE"/>
+        	</intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.ReceiverSms" android:enabled="true">
+        	<intent-filter> 
+				<action android:name="android.provider.Telephony.SMS_RECEIVED"/> 
+			</intent-filter> 
+        </receiver>       
+        <receiver android:name=".receivers.ReceiverBoot">
+        	<intent-filter> 
+				<action android:name="android.intent.action.BOOT_COMPLETED"/> 
+			</intent-filter> 
+        </receiver>
+		<receiver android:name=".receivers.ReceiverConnection">   
+			<intent-filter>   
+      			<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>   
+			</intent-filter>   
+		</receiver> 
+        
+    </application>
+    
+	<!-- 接收开机完成广播的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.RECEIVE_SMS"/>	
+	<uses-permission android:name="android.permission.SEND_SMS"/>	
+	<uses-permission android:name="android.permission.READ_SMS"/>
+	<uses-permission android:name="android.permission.WRITE_SMS"/>
+	<uses-permission android:name="android.permission.DEVICE_POWER" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 解锁的权限 -->
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+	<!-- 亮屏的权限 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<!-- 百度定位所需权限 -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+</manifest>

@@ -1,0 +1,57 @@
+<resources>
+
+    <string name="app_name">谁动了我的手机</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">谁动了我的手机</string>
+    <string name="title_activity_doing">盗时报警</string>
+    <string name="title_activity_done">盗后追踪</string>
+    <string name="notification_title">谁动了我的手机</string>
+    <string name="notification_text_hand">已开启【手持模式】</string>
+    <string name="notification_text_pocket">已开启【口袋模式】</string>
+    <string name="notification_text_leave">已开启【远离模式】</string>
+    
+    <string name="toast_pocket_started">已开启【口袋模式】</string>
+    <string name="toast_hand_started">已开启【手持模式】</string>
+    <string name="toast_away_started">已开启【远离模式】</string>
+    <string name="toast_done_pass_empty">密码不能为空！</string>
+    <string name="toast_done_pass_different">两次输入不一致！</string>
+    <string name="toast_done_num_empty">号码不能为空！</string>
+    <string name="toast_done_pass_success">密码设置成功!</string>
+    <string name="toast_done_num_success">设置成功：</string>
+    <string name="toast_check_pass_err">密码不匹配！</string>
+    <string name="toast_done_started">【盗后追踪】已开启!</string>
+    <string name="toast_done_closed">【盗后追踪】已关闭!</string>
+    
+    <string name="btn_text_back">返回</string>   
+    <string name="btn_text_done_start">一键开启</string>
+    <string name="btn_text_done_close">一键关闭</string>
+    <string name="btn_text_yes">是</string>
+    <string name="btn_text_no">否</string>
+    <string name="btn_text_confirm">确定</string>
+    <string name="btn_text_test">测试</string>
+    
+    <string name="text_title_doing">盗时报警</string>
+    <string name="text_title_done">盗后追踪</string>
+    
+    <string name="text_done_tip0">开启【盗后追踪】</string>
+    <string name="text_done_tip1">小偷哭了,哥哥我笑了...</string>
+    <string name="text_done_pass_setting">设置【进入密码】</string>
+    <string name="text_done_pass_modify">更改【进入密码】</string>
+    <string name="text_done_num_setting">设置【安全号码】</string>
+    <string name="text_done_num_modify">更改【安全号码】</string>
+    <string name="text_done_pass_dialog_setting">设置进入密码：</string>
+    <string name="text_done_pass_dialog_modify">更改进入密码：</string>
+    <string name="text_done_num_dialog_setting">设置安全手机号：</string>
+    <string name="text_done_num_dialog_modify">更改安全手机号：</string>
+    <string name="text_check_password_dialog">请输入密码：</string>
+    <string name="text_done_sms1">sim卡已被更换，其IMSI码为</string>
+    <string name="text_done_sms2">您可以到电信营业厅，查询该sim卡的详细信息！</string>
+    <string name="text_done_sms3">亲，你的手机号已被我选作【安全号码】，恭喜你！</string>
+    <string name="text_done_sms4">测试短信已发！</string>
+    
+    <string name="edit_hint_done_password">输入密码...</string>
+    <string name="edit_hint_done_password_confirm">再次输入...</string>
+    <string name="edit_hint_done_number">输入号码...</string>
+
+</resources>
